@@ -3,40 +3,17 @@
 --dark:#4B0082;
 }
 
+* {
+background-color: var(--light);
+}
+
 body {
     display: flex;
     flex-direction: column;
 }
 
-.header {
-    color: var(--dark);
-    background-color: var(--light);
-    display: flex;
-    align-content:center;
-    justify-content: center;
-}
-
 h1 {
     font-size: 50px;
-}
-
-#navbar {
-    color: var(--dark);
-    background-color: var(--light);
-    display: inline-flex;
-    align-content:center;
-    justify-content: center;
-}
-
-#intro {
-    color: var(--dark);
-    background-color: var(--light);
-    display: flex;
-    align-content:center;
-    justify-content: center;
-    font-size: 25px;
-    margin: 0px;
-    padding-left: 20px;
 }
 
 nav li {
@@ -48,9 +25,11 @@ nav li {
     margin-inline: 50px;
 }
 
-#intropic {
+.header {
+    color: var(--dark);
     display: flex;
-    max-width: 20%;
+    align-content:center;
+    justify-content: center;
 }
 
 .image {
@@ -61,5 +40,30 @@ nav li {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--light);
   }
+
+#navbar {
+    color: var(--dark);
+    display: inline-flex;
+    align-content:center;
+    justify-content: center;
+}
+
+#intro {
+    color: var(--dark);
+    display: flex;
+    align-content:center;
+    justify-content: center;
+    font-size: 25px;
+    margin: 0px;
+    padding-left: 20px;
+}
+
+#intropic {
+    display: flex;
+    max-width: 20%;
+}
+
+#search-btn, #search-input, #search-type {
+    background-color: white;
+}
