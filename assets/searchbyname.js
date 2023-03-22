@@ -84,6 +84,36 @@ function displayAnimalInfo(data){
 			GenderDiv.innerHTML = "Gender: " + animalGender;
 			catSearch.appendChild(GenderDiv);
 
+			var animalAttributes = animal.attributes;
+			var attributesDiv = document.createElement("p");
+			attributesDiv.innerHTML = "House-trained: " + animalAttributes.house_trained;
+			catSearch.appendChild(attributesDiv);
+
+			var animalAttributes = animal.attributes;
+			var attributesDiv = document.createElement("p");
+			attributesDiv.innerHTML = "Shots Current: " + animalAttributes.shots_current;
+			catSearch.appendChild(attributesDiv);
+
+			var animalAttributes = animal.attributes;
+			var attributesDiv = document.createElement("p");
+			attributesDiv.innerHTML = "Spayed / Neutered: " + animalAttributes.spayed_neutered;
+			catSearch.appendChild(attributesDiv);
+
+			var animalDescription = animal.description;
+			var descriptionDiv = document.createElement("p");
+			descriptionDiv.innerHTML = animalDescription;
+			catSearch.appendChild(descriptionDiv);
+
+			var animalContact = animal.contact;
+			var contactDiv = document.createElement("p");
+			contactDiv.innerHTML = "Email: " + animalContact.email;
+			catSearch.appendChild(contactDiv);
+
+			var animalContact = animal.contact;
+			var contactDiv = document.createElement("p");
+			contactDiv.innerHTML = "Phone: " + animalContact.phone;
+			catSearch.appendChild(contactDiv);
+	
 		}
 	}
 	
