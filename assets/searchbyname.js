@@ -86,19 +86,43 @@ function displayAnimalInfo(data){
 
 			var animalAttributes = animal.attributes;
 			var attributesDiv = document.createElement("p");
-			attributesDiv.innerHTML = "House-trained: " + animalAttributes.house_trained;
-			catSearch.appendChild(attributesDiv);
+			if (animalAttributes.house_trained = true) {
+				attributesDiv.innerHTML = "House-trained: Yes";
+				catSearch.appendChild(attributesDiv);
+			} else if (animalAttributes.house_trained = false) {
+				attributesDiv.innerHTML = "House-trained: No";
+				catSearch.appendChild(attributesDiv);
+			} else {
+				attributesDiv.innerHTML = "House-trained: unknown";
+				catSearch.appendChild(attributesDiv);
+			}
+			
+			var animalAttributes = animal.attributes;
+			var attributesDiv = document.createElement("p");
+			if (animalAttributes.shots_current = true) {
+				attributesDiv.innerHTML = "Shots Current: Yes"
+				catSearch.appendChild(attributesDiv);
+			} else if (animalAttributes.shots_current = false) {
+				attributesDiv.innerHTML = "Shots Current: No";
+				catSearch.appendChild(attributesDiv);
+			} else {
+				attributesDiv.innerHTML = "Shots Current: unknown";
+				catSearch.appendChild(attributesDiv);
+			}
 
 			var animalAttributes = animal.attributes;
 			var attributesDiv = document.createElement("p");
-			attributesDiv.innerHTML = "Shots Current: " + animalAttributes.shots_current;
-			catSearch.appendChild(attributesDiv);
-
-			var animalAttributes = animal.attributes;
-			var attributesDiv = document.createElement("p");
-			attributesDiv.innerHTML = "Spayed / Neutered: " + animalAttributes.spayed_neutered;
-			catSearch.appendChild(attributesDiv);
-
+			if (animalAttributes.spayed_neutered = true) {
+				attributesDiv.innerHTML = "Spayed / Neutered: Yes";
+				catSearch.appendChild(attributesDiv);
+			} else if (animalAttributes.spayed_neutered = false) {
+				attributesDiv.innerHTML = "Spayed / Neutered: No";
+				catSearch.appendChild(attributesDiv);
+			} else {
+				attributesDiv.innerHTML = "Spayed / Neutered: unknown";
+				catSearch.appendChild(attributesDiv);
+			}
+			
 			var animalDescription = animal.description;
 			var descriptionDiv = document.createElement("p");
 			descriptionDiv.innerHTML = animalDescription;
