@@ -1,6 +1,9 @@
 var inputSearch = document.getElementById("search-input");
 var searchBtn = document.getElementById("search-btn");
 var catSearch = document.getElementById("user-inputs")
+var breedbtn = document.getElementById('search-breed-btn');
+
+const breedList = document.querySelector('.breed-list');
 
 //var url = "https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=beng";
 
@@ -142,16 +145,116 @@ function displayAnimalInfo(data){
 	}
 	
 
-
-
-
-
-
-
-
 	
 }
 
+function getAllBreeds(){
+    fetch('https://api.thedogapi.com/v1/breeds')
+    .then(response => response.json())
+    .then(data => {
+        // Loop through the list of breeds and create an options list
+        data.forEach(breed => {
+            const option = document.createElement('option');
+            option.value = breed.name;
+            option.setAttribute("data-id", breed.id);
+            breedList.appendChild(option);
+        });
+    })
+    .catch(error => console.log(error));
+
+}
+
+getAllBreeds()
+
+function showField(fieldId) {
+	
+	var field = document.getElementById(fieldId);
+	
+	
+	if (fieldId === "user-inputs") {
+		field.style.display = "block";
+		document.getElementById('breed-display').innerHTML=''
+		document.getElementById('user-inputs2').style.display='none'
+	}
+	if(fieldId === "user-inputs2"){
+		
+		document.getElementById('user-inputs').style.display='none'
+		field.style.display='block'
+	}
+}
+
+
 
 searchBtn.addEventListener('click', getAnimalInfo);
-  
+// Add an event listener to the breed search form
+breedbtn.addEventListener('click', event => {
+    event.preventDefault();
+    var inputElement = document.getElementById("search-breed-input");
+    var datalistElement = document.getElementById("breed-list");
+    var breedValue = undefined;
+    var breedId ='';
+    for (var i = 0; i < datalistElement.options.length; i++) {
+        var option = datalistElement.options[i];
+        if (option.value === inputElement.value) {
+        breedValue = option;
+        // get selected id
+        breedId = breedValue.getAttribute("data-id");
+        break;
+        }
+    }
+    
+    if (breedValue) {
+        // alert(breedValue.value + breedId);
+        console.log();
+        getBreedDetails(breedId,breedValue.value);
+    }
+
+	inputElement.value=''
+	
+    
+});
+
+async function getBreedDetails(breedId,breedValue) {
+    const url = `https://api.thedogapi.com/v1/breeds/${breedId}`;
+
+    
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error("Breed not found");
+        }
+
+        const breedData = await response.json()
+        displayBreedDetail(breedData);
+        getBreedImage(breedId)
+
+        
+   
+}
+
+
+function getBreedImage(breedId){
+    const breedimage = document.getElementById("breed-image");
+    fetch(`https://api.thedogapi.com/v1/images/search?breed_id=${breedId}`)
+        .then(response => response.json())
+        .then(data => {
+            const image = data[0];
+            breedimage.src = image.url;
+        })
+}
+
+function displayBreedDetail(data) {
+    const breed_name = document.getElementById("breed-name");
+    const breed_temperament = document.getElementById("breed-temperament");
+    const breed_life_span = document.getElementById("breed-life-span");
+    const breed_weight = document.getElementById("breed-weight");
+    const breed_height = document.getElementById("breed-height");
+    const breed_bred_for = document.getElementById("breed-bred-for");
+    const breed_breed_group = document.getElementById("breed-breed-group");
+    breed_name.textContent = `${data.name} `;
+    breed_temperament.textContent = `${data.temperament} `;
+    breed_life_span.textContent = `${data.life_span} `;
+    breed_weight.textContent = `Weight ${data.weight.metric} `;
+    breed_height.textContent = `Height ${data.height.metric} `;
+    breed_bred_for.textContent = `${data.bred_for} `;
+    breed_breed_group.textContent = `${data.breed_group} `;
+}

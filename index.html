@@ -15,23 +15,50 @@
     </div>
     <section class="hero"></section>
     <div id="header-row-1">
-        <h2 id="title"></h2>
-        <div id="user-inputs">
-            <label for="search-input"></label>
-            <input id="search-input" type="text" placeholder="Search">
-            <button id="search-btn">Go</button>
-        </div>
-        <label for="search-type">Search Type</label>
-        <select name="search-type" id="search-type">
-            <option value="adoptabledogs">Dogs</option>
-            <option value="adoptablecats">Cats</option>
+        <label for="search-type">Search By</label>
+        <select name="search-type" id="search-type" onchange="showField(this.value)">
+            <option value="user-inputs">Name</option>
+            <option value="user-inputs2">Breed</option>
         </select>
+        <h2 id="title"></h2>
+        <div id="user-inputs" >
+            
+
+            <input id="search-input" type="text" placeholder="Search By Name">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <div id="user-inputs2" style="display: none;">
+            <label for="search-breed-input"></label>
+            <datalist id="breed-list" class="breed-list"></datalist>
+            <input
+            type="text"
+            id="search-breed-input"
+            list="breed-list"
+            placeholder="Search for a breed..." />
+            <button id="search-breed-btn">Search</button>
+        </div>
+
     </div>
     <div id="header-row-2">
         <div id="recent-searches"></div>
     </div>
     <section class="content">
-        <div class="container"></div>
+        <div class="container">
+            <section id="breed-display">
+                <div id="breed-info">
+                  <b id="breed-name"></b> <span><img id="breed-image" src="" alt="dog image" style="display:hidden" /></span>
+                  <p id="breed-temperament"></p>
+                  <p id="breed-life-span"></p>
+                  <p id="breed-bred-for"></p>
+                  <p id="breed-breed-group"></p>
+                  <p id="breed-height"></p>
+                  <p id="breed-weight"></p>
+                </div>
+                
+              </section>
+        </div>
+        
     </section>
     <footer class="footer">
         <h2>Made by Group 3 for all Petlovers</h2>
@@ -39,6 +66,6 @@
             &copy; Carleton Coding Bootcamp Class of 2023
         </p>
     </footer>
-    <script src="./assets/script.js"></script>
+    <script src="assets/script.js"></script>
 </body>
 </html>
