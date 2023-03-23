@@ -86,10 +86,10 @@ function displayAnimalInfo(data){
 
 			var animalAttributes = animal.attributes;
 			var attributesDiv = document.createElement("p");
-			if (animalAttributes.house_trained = true) {
+			if (animalAttributes.house_trained = "true") {
 				attributesDiv.innerHTML = "House-trained: Yes";
 				catSearch.appendChild(attributesDiv);
-			} else if (animalAttributes.house_trained = false) {
+			} else if (animalAttributes.house_trained = "false") {
 				attributesDiv.innerHTML = "House-trained: No";
 				catSearch.appendChild(attributesDiv);
 			} else {
@@ -99,10 +99,10 @@ function displayAnimalInfo(data){
 			
 			var animalAttributes = animal.attributes;
 			var attributesDiv = document.createElement("p");
-			if (animalAttributes.shots_current = true) {
+			if (animalAttributes.shots_current = "true") {
 				attributesDiv.innerHTML = "Shots Current: Yes"
 				catSearch.appendChild(attributesDiv);
-			} else if (animalAttributes.shots_current = false) {
+			} else if (animalAttributes.shots_current = "false") {
 				attributesDiv.innerHTML = "Shots Current: No";
 				catSearch.appendChild(attributesDiv);
 			} else {
@@ -112,10 +112,10 @@ function displayAnimalInfo(data){
 
 			var animalAttributes = animal.attributes;
 			var attributesDiv = document.createElement("p");
-			if (animalAttributes.spayed_neutered = true) {
+			if (animalAttributes.spayed_neutered = "true") {
 				attributesDiv.innerHTML = "Spayed / Neutered: Yes";
 				catSearch.appendChild(attributesDiv);
-			} else if (animalAttributes.spayed_neutered = false) {
+			} else if (animalAttributes.spayed_neutered = "false") {
 				attributesDiv.innerHTML = "Spayed / Neutered: No";
 				catSearch.appendChild(attributesDiv);
 			} else {
