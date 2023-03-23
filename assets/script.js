@@ -147,3 +147,5 @@ function displayAnimalInfo(data){
 
 	
 }
+
+searchBtn.addEventListener('click', getAnimalInfo);
