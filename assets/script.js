@@ -33,6 +33,7 @@ function getAnimalInfo() {
 	// Return the API response as JSON
 	return resp.json();
 }).then(function (data) {
+	
   // Log the pet data
   console.log(data);
   displayAnimalInfo(data);
@@ -42,7 +43,7 @@ function getAnimalInfo() {
 	// Log any errors
 	console.log("something went wrong", err);
 });
-  
+
 }
 
 
@@ -89,7 +90,7 @@ function displayAnimalInfo(data){
 
 			var animalAttributes = animal.attributes;
 			var attributesDiv = document.createElement("p");
-			if (animalAttributes.house_trained = true) {
+			if (animalAttributes.house_trained = "true") {
 				attributesDiv.innerHTML = "House-trained: Yes";
 				animalContainer.appendChild(attributesDiv);
 			} else if (animalAttributes.house_trained = false) {
@@ -102,7 +103,7 @@ function displayAnimalInfo(data){
 			
 			var animalAttributes = animal.attributes;
 			var attributesDiv = document.createElement("p");
-			if (animalAttributes.shots_current = true) {
+			if (animalAttributes.shots_current = "true") {
 				attributesDiv.innerHTML = "Shots Current: Yes"
 				animalContainer.appendChild(attributesDiv);
 			} else if (animalAttributes.shots_current = false) {
@@ -115,7 +116,7 @@ function displayAnimalInfo(data){
 
 			var animalAttributes = animal.attributes;
 			var attributesDiv = document.createElement("p");
-			if (animalAttributes.spayed_neutered = true) {
+			if (animalAttributes.spayed_neutered = "true") {
 				attributesDiv.innerHTML = "Spayed / Neutered: Yes";
 				animalContainer.appendChild(attributesDiv);
 			} else if (animalAttributes.spayed_neutered = false) {
@@ -143,9 +144,11 @@ function displayAnimalInfo(data){
 
 			catSearch.appendChild(animalContainer);
 	
+			catSearch.classList.add("Result");
+			
+			
 		}
 	}
-	
 
 	
 }
