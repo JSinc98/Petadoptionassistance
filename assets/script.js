@@ -1,7 +1,6 @@
 var inputSearch = document.getElementById("search-input");
 var searchBtn = document.getElementById("search-btn");
 var catSearch = document.getElementById("user-inputs")
-var breedbtn = document.getElementById('search-breed-btn');
 
 const breedList = document.querySelector('.breed-list');
 
@@ -34,7 +33,7 @@ function getAnimalInfo() {
 	// Return the API response as JSON
 	return resp.json();
 }).then(function (data) {
-	inputSearch.innerHTML = "";
+	
   // Log the pet data
   console.log(data);
   displayAnimalInfo(data);
@@ -44,12 +43,11 @@ function getAnimalInfo() {
 	// Log any errors
 	console.log("something went wrong", err);
 });
-  
+
 }
 
 
 function displayAnimalInfo(data){
-
 	//displays dogs info
 
 	for (var i = 0; i < data.animals.length; i++){
@@ -143,10 +141,10 @@ function displayAnimalInfo(data){
 			catSearch.appendChild(contactDiv);
 	
 			catSearch.classList.add("Result");
-
+			
+			
 		}
 	}
-	
 
 	
 }
