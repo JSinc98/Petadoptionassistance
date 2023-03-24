@@ -34,6 +34,7 @@ function getAnimalInfo() {
 	// Return the API response as JSON
 	return resp.json();
 }).then(function (data) {
+	inputSearch.innerHTML = "";
   // Log the pet data
   console.log(data);
   displayAnimalInfo(data);
@@ -141,6 +142,8 @@ function displayAnimalInfo(data){
 			contactDiv.innerHTML = "Phone: " + animalContact.phone;
 			catSearch.appendChild(contactDiv);
 	
+			catSearch.classList.add("Result");
+
 		}
 	}
 	
