@@ -2,6 +2,10 @@ var inputSearch = document.getElementById("search-input");
 var searchBtn = document.getElementById("search-btn");
 var catSearch = document.getElementById("user-inputs")
 var animalContainer = document.createElement("div");
+animalContainer.classList.add('animal-desc')
+
+catSearch.appendChild(animalContainer)
+
 
 
 //var url = "https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=beng";
@@ -50,105 +54,114 @@ function getAnimalInfo() {
 function displayAnimalInfo(data){
 
 	//displays dogs and cat info
-	animalContainer.innerHTML = "";
+	 
+	
 
 	for (var i = 0; i < data.animals.length; i++){
+		var singledesc= document.createElement('div')
+		singledesc.classList.add('single-desc')
 		var animal = data.animals[i];
 		
 		if ((animal.type == "Cat") || (animal.type == "Dog")){
-			var animalName = animal.name;
-			var animalDiv = document.createElement("h1");
-			animalDiv.innerHTML = "Name: " + animalName;
-			animalContainer.appendChild(animalDiv);
-
-			var animalBreed = animal.breeds.primary;
-			var breedDiv = document.createElement("p");
-			breedDiv.innerHTML = "Breed: " + animalBreed;
-			animalContainer.appendChild(breedDiv);
-
 			if (animal.photos.length != 0) {
 				var animalImage = animal.photos[0].medium;
 				var imgDiv = document.createElement("img");
 				imgDiv.src = animalImage;
-				animalContainer.appendChild(imgDiv);
+				singledesc.appendChild(imgDiv);
 			}
+
+			var animalName = animal.name;
+			var animalDiv = document.createElement("p");
+			animalDiv.innerHTML = "Name: " + animalName;
+			singledesc.appendChild(animalDiv);
+
+			var animalBreed = animal.breeds.primary;
+			var breedDiv = document.createElement("p");
+			breedDiv.innerHTML = "Breed: " + animalBreed;
+			singledesc.appendChild(breedDiv);
+
+			
 			
 			var animalAge = animal.age;
 			var animalAgeDiv = document.createElement("p");
 			animalAgeDiv.innerHTML = "Age: " + animalAge;
-			animalContainer.appendChild(animalAgeDiv);
+			singledesc.appendChild(animalAgeDiv);
 
 			var animalStatus = animal.status;
 			var statusDiv = document.createElement("p");
 			statusDiv.innerHTML = "Status: " + animalStatus;
-			animalContainer.appendChild(statusDiv);
+			singledesc.appendChild(statusDiv);
 
 			var animalGender = animal.gender;
 			var GenderDiv = document.createElement("p");
 			GenderDiv.innerHTML = "Gender: " + animalGender;
-			animalContainer.appendChild(GenderDiv);
+			singledesc.appendChild(GenderDiv);
 
 			var animalAttributes = animal.attributes;
 			var attributesDiv = document.createElement("p");
 			if (animalAttributes.house_trained = "true") {
 				attributesDiv.innerHTML = "House-trained: Yes";
-				animalContainer.appendChild(attributesDiv);
+				singledesc.appendChild(attributesDiv);
 			} else if (animalAttributes.house_trained = false) {
 				attributesDiv.innerHTML = "House-trained: No";
-				animalContainer.appendChild(attributesDiv);
+				singledesc.appendChild(attributesDiv);
 			} else {
 				attributesDiv.innerHTML = "House-trained: unknown";
-				animalContainer.appendChild(attributesDiv);
+				singledesc.appendChild(attributesDiv);
 			}
 			
 			var animalAttributes = animal.attributes;
 			var attributesDiv = document.createElement("p");
 			if (animalAttributes.shots_current = "true") {
 				attributesDiv.innerHTML = "Shots Current: Yes"
-				animalContainer.appendChild(attributesDiv);
+				singledesc.appendChild(attributesDiv);
 			} else if (animalAttributes.shots_current = false) {
 				attributesDiv.innerHTML = "Shots Current: No";
-				animalContainer.appendChild(attributesDiv);
+				singledesc.appendChild(attributesDiv);
 			} else {
 				attributesDiv.innerHTML = "Shots Current: unknown";
-				animalContainer.appendChild(attributesDiv);
+				singledesc.appendChild(attributesDiv);
 			}
 
 			var animalAttributes = animal.attributes;
 			var attributesDiv = document.createElement("p");
 			if (animalAttributes.spayed_neutered = "true") {
 				attributesDiv.innerHTML = "Spayed / Neutered: Yes";
-				animalContainer.appendChild(attributesDiv);
+				singledesc.appendChild(attributesDiv);
 			} else if (animalAttributes.spayed_neutered = false) {
 				attributesDiv.innerHTML = "Spayed / Neutered: No";
-				animalContainer.appendChild(attributesDiv);
+				singledesc.appendChild(attributesDiv);
 			} else {
 				attributesDiv.innerHTML = "Spayed / Neutered: unknown";
-				animalContainer.appendChild(attributesDiv);
+				singledesc.appendChild(attributesDiv);
 			}
 			
 			var animalDescription = animal.description;
 			var descriptionDiv = document.createElement("p");
 			descriptionDiv.innerHTML = animalDescription;
-			animalContainer.appendChild(descriptionDiv);
+			singledesc.appendChild(descriptionDiv);
 
 			var animalContact = animal.contact;
 			var contactDiv = document.createElement("p");
 			contactDiv.innerHTML = "Email: " + animalContact.email;
-			animalContainer.appendChild(contactDiv);
+			singledesc.appendChild(contactDiv);
 
 			var animalContact = animal.contact;
 			var contactDiv = document.createElement("p");
 			contactDiv.innerHTML = "Phone: " + animalContact.phone;
-			animalContainer.appendChild(contactDiv);
+			singledesc.appendChild(contactDiv);
 
-			catSearch.appendChild(animalContainer);
+			// catSearch.append(singledesc);
+			catSearch.appendChild(singledesc)
 	
 			catSearch.classList.add("Result");
-			
-			
+			 
+			animalContainer.appendChild(singledesc)
 		}
+		 
 	}
+
+
 
 	
 }
