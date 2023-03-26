@@ -5,7 +5,7 @@
 
 
 .search-container {
-   
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     flex-direction: column;
     background-image: linear-gradient(rgb(161 161 161 / 50%),rgba(0,0,0,.5)), url("./imgs/pets.jpg");
     background-color: #cccccc;
@@ -18,11 +18,13 @@
 }
 
 .hero-text h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 75px;
     margin-block-start: 0;
 }
 
 nav li {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     list-style-type: none;
     font-size: 20px;
     display:inline-flex;
@@ -33,7 +35,6 @@ nav li {
 
 .header {
     color: var(--dark);
-    /* display: flex; */
     align-content:center;
     justify-content: center;
 }
@@ -43,6 +44,7 @@ nav li {
 }
 
 #search-results {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
 }
 
@@ -53,6 +55,7 @@ nav li {
   }
 
   #header-row-1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 25px;
     margin: 0px;
     padding-left: 20px;
@@ -62,6 +65,7 @@ nav li {
 
   .hero-text {
     text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--dark);
   }
 
@@ -78,6 +82,7 @@ nav li {
     align-content:center;
     justify-content: center;
     font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0px;
     padding-left: 20px;
 }
@@ -89,11 +94,22 @@ nav li {
 
 #search-btn, #search-input, #search-type {
     background-color: white;
-    display: flex;
+    display: center;
     align-content:center;
     justify-content: center;
     font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0 auto;
-    display: inline-block;
     padding-left: 20px;
+}
+
+.footer {
+    padding: 30px;
+    clear: both;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 20px;
 }
