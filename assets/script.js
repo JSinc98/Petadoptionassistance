@@ -1,6 +1,6 @@
 var inputSearch = document.getElementById("search-input");
 var searchBtn = document.getElementById("search-btn");
-var catSearch = document.getElementById("user-inputs")
+var catSearch = document.getElementById("search-results")
 var animalContainer = document.createElement("div");
 
 

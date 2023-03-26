@@ -1,16 +1,25 @@
-:root {
+/* :root {
 --light: #02CCFE;
 --dark:#360758;
-}
+} */
 
 
-body {
-    display: flex;
+.search-container {
+   
     flex-direction: column;
+    background-image: linear-gradient(rgb(161 161 161 / 50%),rgba(0,0,0,.5)), url("./imgs/pets.jpg");
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
 }
 
-h1 {
+.hero-text h1 {
     font-size: 75px;
+    margin-block-start: 0;
 }
 
 nav li {
@@ -24,13 +33,17 @@ nav li {
 
 .header {
     color: var(--dark);
-    display: flex;
+    /* display: flex; */
     align-content:center;
     justify-content: center;
 }
 
 .image {
     flex-basis: 20%;
+}
+
+#search-results {
+    text-align: center;
 }
 
 .container {
@@ -40,30 +53,15 @@ nav li {
   }
 
   #header-row-1 {
-    display: flex;
-    align-content: center;
-    justify-content: center;
     font-size: 25px;
     margin: 0px;
     padding-left: 20px;
+    text-align: center;
   }
 
-  .hero-image {
-    background-image: url("./imgs/pets.jpg");
-    background-color: #cccccc;
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
 
   .hero-text {
     text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: var(--dark);
   }
 
