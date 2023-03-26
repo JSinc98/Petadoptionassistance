@@ -29,7 +29,7 @@
     margin: auto;
     padding: 100px;
     color: #d47c11;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: -1px -1px 0 #f8f8f8, 1px -1px 0 #f8f8f8, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 nav li {
