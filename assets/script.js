@@ -55,7 +55,7 @@ function displayAnimalInfo(data){
 
 	//displays dogs and cat info
 	 
-	
+	animalContainer.innerHTML = "";
 
 	for (var i = 0; i < data.animals.length; i++){
 		var singledesc= document.createElement('div')

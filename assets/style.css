@@ -82,9 +82,9 @@ nav li {
   }
 
   .hero-image {
-    background-image: url("./imgs/image.png");
+    background-image: linear-gradient(rgba(163, 191, 238, 0.5), rgba(0, 0, 0, .5)), url(./imgs/pets.jpg);
     background-color: #cccccc;
-    height: 80vh;
+    height: 500px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -96,7 +96,7 @@ nav li {
   }
 
   .hero-text {
-    text-align: left;
+    text-align: center;
     padding-left: 20px;
     color: var(--dark);
     padding-right: 30px;
