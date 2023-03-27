@@ -154,7 +154,5 @@ function displayAnimalInfo(data){
 }
 
 
-
-
 searchBtn.addEventListener('click', getAnimalInfo);
 // Add an event listener to the breed search form

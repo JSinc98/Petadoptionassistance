@@ -1,9 +1,6 @@
-/* :root {
---light: #02CCFE;
---dark:#360758;
-} */
 
 
+/* Title and introduction of the search engine*/
 .search-container {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     flex-direction: column;
@@ -16,14 +13,14 @@
     position: relative;
 
 }
-
+/* Calls the Pet Adoption Assistance h1 which is the big title on the page */
 .hero-text h1 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 75px;
     margin-block-start: 0px;
     display: center;
 }
-
+/* Styles the title Pet Adoption Asistance text  */
 .title {
     display: center;
     margin: auto;
@@ -32,37 +29,21 @@
     text-shadow: -1px -1px 0 #f8f8f8, 1px -1px 0 #f8f8f8, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-nav li {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    list-style-type: none;
-    font-size: 20px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-inline: 50px;
-}
 
-.header {
-    color: var(--dark);
-    align-content: center;
-    justify-content: center;
-}
-
-.image {
-    flex-basis: 20%;
-}
-
+/* styles the font search results when loaded  */
 #search-results {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
 }
 
+/* sets the search results in the center  */
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* sets style for the search field instructions  */
 #header-row-1 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 25px;
@@ -71,7 +52,7 @@ nav li {
     text-align: center;
 }
 
-
+/* selects and sets all hero text to center */
 .hero-text {
     display: center;
     text-align: center;
@@ -79,13 +60,8 @@ nav li {
     color: var(--dark);
 }
 
-#navbar {
-    color: var(--dark);
-    display: inline-flex;
-    align-content: center;
-    justify-content: center;
-}
-
+    
+/* selects the hero intro text description below the title */
 #intro {
     color: white;
     display: flex;
@@ -99,14 +75,9 @@ nav li {
     text-shadow: -1px -1px 0 #d47c11, 1px -1px 0 #d47c11, -1px 1px 0 #d47c11, 1px 1px 0 #d47c11;
 }
 
-#intropic {
-    display: flex;
-    max-width: 20%;
-}
-
+/* styles search bar search input text  */
 #search-btn,
-#search-input,
-#search-type {
+#search-input {
     background-color: white;
     display: center;
     align-content: center;
