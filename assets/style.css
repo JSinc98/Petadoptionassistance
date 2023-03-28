@@ -1,8 +1,9 @@
+
+/* text colour */
 :root {
 --light: #02CCFE;
 --dark:rgb(7, 7, 96);
 }
-
 
 body {
     display: flex;
@@ -39,6 +40,8 @@ nav li {
     justify-content: center;
   }
 
+  /*  style of the dogs and cats Images starts --> */
+
   #header-row-1 {
     display: flex;
     align-content: flex-start;
@@ -52,10 +55,13 @@ nav li {
     border-radius: 5px; 
 
   }
+  /*  style of the dogs and cats Images ends --> */
 
+
+  /*  style of the dogs and cats fonts and color  --> */
   #header-row-1 #title{
     display: block;
-    font-size: 25px;
+    font-size: 35px;
     color: var(--dark);
     text-transform: capitalize;
 
@@ -64,7 +70,7 @@ nav li {
     display: block;
 
   }
-
+/*  search input styling starts */
   #search-input{
     outline-style: none;
     width: 40%;
@@ -80,6 +86,7 @@ nav li {
     border-radius: 10px;
     cursor: pointer;
   }
+/*  search input styling ends */
 
   .hero-image {
     background-image: linear-gradient(rgba(163, 191, 238, 0.5), rgba(0, 0, 0, .5)), url(./imgs/pets.jpg);
@@ -121,6 +128,7 @@ nav li {
     font-size: 30px;
     line-height: 40px;
     word-spacing: 8px;
+    text-shadow: 3px 5px 5px gray;
 }
 
 #intropic {
@@ -128,6 +136,8 @@ nav li {
     max-width: 20%;
 }
 
+
+/* search Button styling starts  */
 #search-btn, #search-input, #search-type {
     background-color: white;
     display: flex;
@@ -138,7 +148,9 @@ nav li {
     display: inline-block;
     padding-left: 20px;
 }
+/* search Button styling ends  */
 
+/*  styling of animalContainer.classList.add('animal-desc') in Java script */
 .animal-desc{
   display: flex;
   justify-content: space-around;
@@ -148,6 +160,8 @@ nav li {
   padding: 10px;
   background-color: rgb(234, 215, 215);
 }
+
+/* styling of singledesc.classList.add('single-desc')in Java script  starts */
 
 .single-desc{
   width: 30%;
@@ -173,7 +187,10 @@ nav li {
   border-radius: 15px;
   transition: 2s ease-in-out ;
 }
+/* styling of singledesc.classList.add('single-desc')in Java script ends */
 
+
+ /* footer styling start  */
 .footer{
     background: var(--dark);
      text-align: center;
@@ -192,7 +209,10 @@ nav li {
     font-style: italic;
     font-size: 18px;
 }
+/* footer styling ends */
 
+
+/* @media screen starts */
 @media screen and (max-width:900px) {
   .single-desc{
     width: 45%;
@@ -216,3 +236,4 @@ nav li {
     margin: 10px 2%;
   }
 }
+/* @media screen starts */
