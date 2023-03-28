@@ -1,100 +1,239 @@
 
-
-/* Title and introduction of the search engine*/
-.search-container {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    flex-direction: column;
-    background-image: linear-gradient(rgb(161 161 161 / 50%), rgba(0, 0, 0, .5)), url("./imgs/pets.jpg");
-    background-color: #cccccc;
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-
-}
-/* Calls the Pet Adoption Assistance h1 which is the big title on the page */
-.hero-text h1 {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 75px;
-    margin-block-start: 0px;
-    display: center;
-}
-/* Styles the title Pet Adoption Asistance text  */
-.title {
-    display: center;
-    margin: auto;
-    padding: 100px;
-    color: #d47c11;
-    text-shadow: -1px -1px 0 #f8f8f8, 1px -1px 0 #f8f8f8, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-
-/* styles the font search results when loaded  */
-#search-results {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center;
-}
-
-/* sets the search results in the center  */
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* sets style for the search field instructions  */
-#header-row-1 {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 25px;
-    margin: 0px;
-    padding-left: 20px;
-    text-align: center;
-}
-
-/* selects and sets all hero text to center */
-.hero-text {
-    display: center;
-    text-align: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: var(--dark);
-}
-
+/* text colour */
+:root {
+    --light: #02CCFE;
+    --dark:rgb(7, 7, 96);
+    }
     
-/* selects the hero intro text description below the title */
-#intro {
-    color: white;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    font-size: 25px;
-    font-weight: 100;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 0px;
-    padding-left: 20px;
-    text-shadow: -1px -1px 0 #d47c11, 1px -1px 0 #d47c11, -1px 1px 0 #d47c11, 1px 1px 0 #d47c11;
-}
-
-/* styles search bar search input text  */
-#search-btn,
-#search-input {
-    background-color: white;
-    display: center;
-    align-content: center;
-    justify-content: center;
-    font-size: 25px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 0 auto;
-    padding-left: 20px;
-}
-
-.footer {
-    padding: 30px;
-    clear: both;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center;
-}
-
-.footer h2 {
-    font-size: 20px;
-}
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    h1 {
+        font-size: 75px;
+    }
+    
+    nav li {
+        list-style-type: none;
+        font-size: 20px;
+        display:inline-flex;
+        justify-content: center;
+        align-items:center;
+        margin-inline: 50px;
+    }
+    
+    .header {
+        color: var(--dark);
+        display: flex;
+        align-content:center;
+        justify-content: center;
+    }
+    
+    .image {
+        flex-basis: 20%;
+    }
+    
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      /*  style of the dogs and cats Images starts --> */
+    
+      #header-row-1 {
+        display: flex;
+        align-content: flex-start;
+        justify-content: left;
+        flex-direction: column;
+        font-size: 25px;
+        margin: 20px 10px;
+        background-color: white;
+        box-shadow: 0px 1px 19px 4px gray;
+        padding: 20px;
+        border-radius: 5px; 
+    
+      }
+      /*  style of the dogs and cats Images ends --> */
+    
+    
+      /*  style of the dogs and cats fonts and color  --> */
+      #header-row-1 #title{
+        display: block;
+        font-size: 35px;
+        color: var(--dark);
+        text-transform: capitalize;
+    
+      }
+      #user-inputs{
+        display: block;
+    
+      }
+    /*  search input styling starts */
+      #search-input{
+        outline-style: none;
+        width: 40%;
+        padding: 12px 16px;
+        border-radius: 10px;
+        border: 1px solid var(--dark);
+      }
+      #search-btn{
+        background-color: var(--dark) !important;
+        color: white;
+        width: 15%;
+        padding: 12px 16px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    /*  search input styling ends */
+    
+      .hero-image {
+        background-image: linear-gradient(rgba(163, 191, 238, 0.5), rgba(0, 0, 0, .5)), url(./imgs/pets.jpg);
+        background-color: #cccccc;
+        height: 500px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        
+    
+      }
+    
+      .hero-text {
+        text-align: center;
+        padding-left: 20px;
+        color: var(--dark);
+        padding-right: 30px;
+        
+      }
+    
+      .hero-text h1{
+        text-shadow: 3px 5px 5px gray;
+        font-size: 100px;
+      }
+    
+    #navbar {
+        color: var(--dark);
+        display: inline-flex;
+        align-content:center;
+        justify-content: center;
+    }
+    
+    #intro {
+        color: var(--dark);
+        text-align: justify; 
+        font-size: 30px;
+        line-height: 40px;
+        word-spacing: 8px;
+        text-shadow: 3px 5px 5px gray;
+    }
+    
+    #intropic {
+        display: flex;
+        max-width: 20%;
+    }
+    
+    
+    /* search Button styling starts  */
+    #search-btn, #search-input, #search-type {
+        background-color: white;
+        display: flex;
+        align-content:center;
+        justify-content: center;
+        font-size: 25px;
+        margin: 0 auto;
+        display: inline-block;
+        padding-left: 20px;
+    }
+    /* search Button styling ends  */
+    
+    /*  styling of animalContainer.classList.add('animal-desc') in Java script */
+    .animal-desc{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-flow: row wrap;
+      margin: 10px;
+      padding: 10px;
+      background-color: rgb(234, 215, 215);
+    }
+    
+    /* styling of singledesc.classList.add('single-desc')in Java script  starts */
+    
+    .single-desc{
+      width: 30%;
+      text-align: justify;
+      padding: 10px 12px;
+      border: 1px solid var(--dark);
+      background-color: white;
+      border-radius: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    
+    .single-desc p{
+      font-weight: 800;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      padding-top: 5px;
+    }
+    
+    .single-desc img{
+      width: 100%;
+      height: 400px;
+      border-radius: 15px;
+      transition: 2s ease-in-out ;
+    }
+    /* styling of singledesc.classList.add('single-desc')in Java script ends */
+    
+    
+     /* footer styling start  */
+    .footer{
+        background: var(--dark);
+         text-align: center;
+        padding:10px;
+        color: white;
+    }
+    
+    .footer h2{
+        font-size: 26px;
+        display: block;
+    
+    }
+    
+    .footer p{
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-size: 18px;
+    }
+    /* footer styling ends */
+    
+    
+    /* @media screen starts */
+    @media screen and (max-width:900px) {
+      .single-desc{
+        width: 45%;
+        text-align: justify;
+        padding: 10px 12px;
+        border: 1px solid var(--dark);
+        background-color: white;
+        border-radius: 10px;
+        margin: 10px 2%;
+      }
+    }
+    
+    @media screen and (max-width:450px) {
+      .single-desc{
+        width: 93%;
+        text-align: justify;
+        padding: 10px 12px;
+        border: 1px solid var(--dark);
+        background-color: white;
+        border-radius: 10px;
+        margin: 10px 2%;
+      }
+    }
+    /* @media screen starts */
